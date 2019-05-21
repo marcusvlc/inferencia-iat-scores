@@ -5,7 +5,7 @@ output:
     df_print: paged
 theme: sandstone
 params: 
-    arquivo_dados: "data/sdsu .csv"
+    arquivo_dados: "data/tamu .csv"
 ---
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
@@ -144,9 +144,14 @@ grid.arrange(p1, p2, ncol = 2)
 
 ```
 
+```{r}
+iat %>% group_by(sex) %>% summarise(n=n(), mean=mean(d_art), sd=sd(d_art))
+```
+
 ### Conclusão
 
-Em média, as mulheres que participaram do experimento tiveram uma associação implícita (medida pelo IAT) com a matemárica **positiva/negativa** e **fraca/média/forte** (média XXX, desv. padrão YYY, N = ZZZ). Homens tiveram uma associação **positiva/negativa** com a matemática, portanto **maior/menor** que a das mulheres (média , desv. padrão, N = ). Houve portanto uma **grande/considerável/pequena** diferença entre homens e mulheres (diferença das médias XXXX, 95% CI [CCC, DDD]). A partir desta amostra, estimamos que...
+Em média, as mulheres que participaram do experimento tiveram uma associação implícita (medida pelo IAT) com a matemática negativa e fraca (média 0.2360648, desv. padrão 0.4515570, N = 58). Homens tiveram uma associação negativa com a matemática, portanto maior que a das mulheres (média 0.4202452, desv. padrão 0.4646915, N = 121). Houve portanto uma pequena diferença entre homens e mulheres (diferença das médias -0.1841804, 95% CI [-0.3267409, -0.04409828]). A partir desta amostra, estimamos que mulheres têm uma associação negativa mais forte, onde essa diferença pode ser pequena mas ainda existe pois o intervalo de confiança não inclui o zero
+
 
 --- 
 *Exemplos de possíveis conclusões para completar*
